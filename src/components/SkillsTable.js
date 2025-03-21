@@ -169,7 +169,7 @@ export default function SpherePage() {
     <div className="w-full h-screen overflow-hidden relative" ref={containerRef}>
       <div className="absolute left-0 right-0 text-center text-white work-copy txt-backdrop-skills">
         <h1 className="text-3xl font-bold ">Skills</h1>
-        <p className="txt-skills">Below are some of the skills I've acquired throughout my career; however, they represent just a glimpse of the expertise I've had the opportunity to work within a professional environment. I’m constantly learning and expanding my knowledge, and stepping outside my comfort zone with new tech stacks is always welcomed.</p>
+        <p className="txt-skills">Below are some of the skills I&apos;ve acquired throughout my career; however, they represent just a glimpse of the expertise I&apos;ve had the opportunity to work within a professional environment. I&apos;m constantly learning and expanding my knowledge, and stepping outside my comfort zone with new tech stacks is always welcomed.</p>
       </div>
     </div>
   );

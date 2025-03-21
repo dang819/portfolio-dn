@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image'
 import ThreeBackground from './ThreeBackground';
 
 export default function IdBadge({
@@ -57,7 +58,7 @@ export default function IdBadge({
 
   return (
     <div className="badge-main-container">
-      {index === 0 && <ThreeBackground />} Only render background once
+      {index === 0 && <ThreeBackground />}
       
       <div className={`lanyard ${!isVisible ? 'invisible' : 'animate-drop'}`}>
         <div className={`lanyard-strap left ${!isActive && 'lanyard--inactive'}`} />
@@ -75,7 +76,7 @@ export default function IdBadge({
             </div>
             <div className='badge-middle-section'>
               <div className="badge-photo">
-                <img className={`${fill && "badge-photo--fill"} ${!isActive && "badge--grayscale"}`} src={img ?? "/placeholder-user.png"} alt="Doctor profile" />
+                <Image width={100} height={100} className={`${fill && "badge-photo--fill"} ${!isActive && "badge--grayscale"}`} src={img ?? "/placeholder-user.png"} alt="Doctor profile" />
               </div>
               <div className="badge-info">
                 <h3>{role.toUpperCase()}</h3>
@@ -108,7 +109,7 @@ export default function IdBadge({
                 <p><b>Expire Date:</b> {endDate}</p>
               </div>
               <div className="badge-barcode">
-                <img src={`${isActive ? './placeholder-barcode.png': './no-barcode.png'}`} alt="Barcode" />
+                <Image width={100} height={100} src={`${isActive ? '/placeholder-barcode.png': '/no-barcode.png'}`} alt="Barcode" />
               </div>
             </div>
             <div className="badge-footer">

@@ -12,7 +12,7 @@ export default function WorkExperience() {
       role: "Full Stack Engineer",
       position: "Team Lead",
       type: "Consultant (Outsourcing)",
-      img: "./logos/number_8_logo.png",
+      img: "/logos/number_8_logo.png",
       department: "Engineering",
       achievements: [
         'Hired as a Front-End Engineer to design and implement reusable components with integration capabilities for the Sitecore CMS.',
@@ -32,7 +32,7 @@ export default function WorkExperience() {
       role: "Full Stack Engineer",
       position: "Team Lead",
       type: "Consultant (Outsourcing)",
-      img: "./logos/partner_hero_logo.png",
+      img: "/logos/partner_hero_logo.png",
       department: "Engineering",
       achievements: [
         'Initially hired as a Front End Engineer to accelerate the development of a mobile application using React Native and Expo, while also managing the overall documentation and changelog of the application.',
@@ -50,7 +50,7 @@ export default function WorkExperience() {
       role: "Technology Implementation",
       position: "Software Engineer",
       type: "Full Time Employee",
-      img: "./logos/emco_logo.png",
+      img: "/logos/emco_logo.png",
       department: "IT",
       achievements: [
         'Hired as a Software Engineer responsible for the inventory and sales modules of a legacy system built on .NET and maintaining SQL DB instances.',
@@ -68,7 +68,7 @@ export default function WorkExperience() {
       role: "IT Support Specialist",
       position: "Software Engineer",
       type: "Full Time Employee",
-      img: "./logos/mhs_logo.png",
+      img: "/logos/mhs_logo.png",
       department: "IT",
       achievements: [
         'Hired as a Software Engineer to provide tier 2 support for the in-house ERP system, with a focus on raw material, manufacturing, inventory management, and distribution areas.',
@@ -90,9 +90,9 @@ export default function WorkExperience() {
           Back to Home
         </button>
       </Link>
-      <div className="mb-16 text-center work-copy txt-backdrop-work">
+      <div className="mb-8 text-center work-copy txt-backdrop-work">
         <h1 className="text-6xl font-bold mb-4">👨‍💻 Experience</h1>
-        <p className="text-xl text-gray-600">Below are the badges I've earned throughout my personal journey called life. I'm eternally grateful for each new skill I've gained at every company, as well as the opportunities and trust I've been given to contribute not only to technical implementations but also to impactful solutions.</p>
+        <p className="text-xl text-gray-600">Below are the badges I&apos;ve earned throughout my personal journey called life. I&apos;m eternally grateful for each new skill I&apos;ve gained at every company, as well as the opportunities and trust I&apos;ve been given to contribute not only to technical implementations but also to impactful solutions.</p>
       </div>
       <div className="wrapper-container">
         {badges.map((badge, index) => (
