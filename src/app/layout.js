@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'ID Badge',
-  description: 'ID Badge with effects',
+  title: 'DN - Portfolio',
+  description: 'Personal portfolio with past experiences and skills section',
 };
 
 export default function RootLayout({ children }) {
