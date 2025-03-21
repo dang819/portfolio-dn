@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  background-color: #e6eef2;
+  font-family: Arial, sans-serif;
+}
+
+.element {
+  display: flex !important;
+}
+
+.me {
+  text-align: center;
+}
+
+.wrapper-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* This can go in a separate CSS file or remain in the component using styled-jsx */
+
+.badge-main-container {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.badge-container {
+  position: relative;
+  perspective: 1000px;
+  width: 310px;
+  margin-top: 155px;
+  z-index: 10;
+}
+
+.badge {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.badge.flipped {
+  transform: rotateY(180deg);
+}
+
+.badge-front,
+.badge-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-front {
+  background-color: white;
+  color: #333;
+}
+
+.badge-back {
+  background-color: #f8f8f8;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+.badge-header {
+  background-color: #0c6bb8;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+.badge--inactive {
+  background-color: #797979 !important;
+}
+
+.badge--inactive-bg {
+  background-color: #f5f5f5 !important;
+}
+
+.badge--grayscale {
+  filter: grayscale(100%);
+}
+
+.badge-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.badge-header p {
+  margin: 0 3px;
+  font-size: 0.7rem;
+}
+
+.badge-photo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.badge-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  border: 3px solid #0c6bb8;
+}
+.badge-photo--fill {
+  object-fit: fill !important;
+}
+
+.badge-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.badge-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.badge-info p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.badge-id {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+
+.badge-role {
+  background-color: #0c6bb8;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.badge-middle-section {
+  flex: 0.93;
+}
+
+.badge-footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.8rem;
+}
+
+.badge-details {
+  padding: 10px;
+  font-size: .75rem;
+  position: relative;
+  overflow-y: auto;
+  padding-bottom: 0;
+  max-height: 260px;
+  height: 260px;
+  margin-bottom: 0.5rem;
+}
+
+.badge-details ul {
+  padding-left: 15px;
+  margin-bottom: -1.5rem;
+  min-height: 121px; /* Ensures overflow is triggered */
+}
+
+.badge-details li {
+  margin-bottom: 10px;
+}
+
+.badge-details.bg-overflow::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(#f8f8f83b, #f8f8f8);
+  pointer-events: none;
+  display: block;
+}
+
+.badge-dates {
+  padding: 0 20px;
+  font-size: 0.8rem;
+}
+
+.badge-barcode {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.badge-barcode img {
+  max-width: 90%;
+  height: 63px;
+  width: 40%;
+  object-fit: cover;
+}
+
+.card-instruction {
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.lanyard {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  z-index: 5;
+}
+
+.lanyard-strap {
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  background-color: #e74c3c;
+  top: 0;
+}
+
+.lanyard--inactive {
+  background-color: #826461
+}
+
+.lanyard-strap.left {
+  left: calc(50% - 40px);
+  transform: rotate(-5deg);
+}
+
+.lanyard-strap.right {
+  right: calc(50% - 40px);
+  transform: rotate(5deg);
+}
+
+.lanyard-clip {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-color: #95a5a6;
+  border-radius: 2px;
+  top: 95px;
+}
+
+.lanyard-clip.left {
+  left: calc(50% - 42px);
+}
+
+.lanyard-clip.right {
+  right: calc(50% - 42px);
+}
+
+.work-copy {
+  padding: 0 16rem;
+}
+
+@media (max-width: 768px) {
+  .work-copy {
+    padding: 0 1rem;
+  }
+}
+
+.txt-backdrop-work {
+  backdrop-filter: blur(6px);
+}
+.txt-backdrop-skills {
+  backdrop-filter: blur(60px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+
+}
+.txt-skills {
+  color: #b7becb ;
+}
+
+/* Animation keyframes defined in the component */
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); }
+  100% { box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2); }
+}
