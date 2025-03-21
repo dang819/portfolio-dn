@@ -65,8 +65,12 @@ function HomeContent() {
   }, [animationComplete, isReturning]);
 
   const navigateTo = (path) => {
-    // Add a query parameter to indicate internal navigation
-    router.push(`${path}?from=home`);
+    if (path === '/skills') {
+      // Full refresh seems to be needed in mobile :(
+      window.location.href = `${path}?from=home`;
+    } else {
+      router.push(`${path}?from=home`);
+    }
   };
 
   return (
