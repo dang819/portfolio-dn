@@ -12,7 +12,7 @@ export default function WorkExperience() {
       role: "Full Stack Engineer",
       position: "Team Lead",
       type: "Consultant (Outsourcing)",
-      img: "/logos/number_8_logo.png",
+      img: "./logos/number_8_logo.png",
       department: "Engineering",
       achievements: [
         'Hired as a Front-End Engineer to design and implement reusable components with integration capabilities for the Sitecore CMS.',
@@ -32,7 +32,7 @@ export default function WorkExperience() {
       role: "Full Stack Engineer",
       position: "Team Lead",
       type: "Consultant (Outsourcing)",
-      img: "logos/partner_hero_logo.png",
+      img: "./logos/partner_hero_logo.png",
       department: "Engineering",
       achievements: [
         'Initially hired as a Front End Engineer to accelerate the development of a mobile application using React Native and Expo, while also managing the overall documentation and changelog of the application.',
@@ -50,7 +50,7 @@ export default function WorkExperience() {
       role: "Technology Implementation",
       position: "Software Engineer",
       type: "Full Time Employee",
-      img: "/logos/emco_logo.png",
+      img: "./logos/emco_logo.png",
       department: "IT",
       achievements: [
         'Hired as a Software Engineer responsible for the inventory and sales modules of a legacy system built on .NET and maintaining SQL DB instances.',
@@ -68,7 +68,7 @@ export default function WorkExperience() {
       role: "IT Support Specialist",
       position: "Software Engineer",
       type: "Full Time Employee",
-      img: "/logos/mhs_logo.png",
+      img: "./logos/mhs_logo.png",
       department: "IT",
       achievements: [
         'Hired as a Software Engineer to provide tier 2 support for the in-house ERP system, with a focus on raw material, manufacturing, inventory management, and distribution areas.',

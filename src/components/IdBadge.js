@@ -6,7 +6,7 @@ import ThreeBackground from './ThreeBackground';
 export default function IdBadge({
   index = 0,
   id = '000000',
-  img = "/placeholder-user.png",
+  img = "./placeholder-user.png",
   fill = false,
   isActive = false,
   company = "N/A", 
@@ -108,7 +108,7 @@ export default function IdBadge({
                 <p><b>Expire Date:</b> {endDate}</p>
               </div>
               <div className="badge-barcode">
-                <img src={`${isActive ? '/placeholder-barcode.png': '/no-barcode.png'}`} alt="Barcode" />
+                <img src={`${isActive ? './placeholder-barcode.png': './no-barcode.png'}`} alt="Barcode" />
               </div>
             </div>
             <div className="badge-footer">
