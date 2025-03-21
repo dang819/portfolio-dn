@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 import { Briefcase, Code } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function Home() {
+function HomeContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const isReturning = searchParams.get('from') === 'internal';
@@ -68,7 +68,7 @@ export default function Home() {
     // Add a query parameter to indicate internal navigation
     router.push(`${path}?from=home`);
   };
-  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-full max-w-5xl px-4 py-12">
@@ -128,5 +128,12 @@ export default function Home() {
         </div>
       </div>
     </div>
+  );
+}
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
